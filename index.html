@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join the Shiplee Franchise</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,74 +13,84 @@
         <button class="toggle-button" onclick="toggleDarkMode()">
             <i class="fas fa-moon" id="toggle-icon"></i> 
         </button>
-        
         <div class="hero-content">
             <img src="images/logo.jpg" alt="Delivery Vehicle" class="hero-image">
             <img src="images/shiplee_india_logo.jpg" alt="Shiplee Logo" class="hero-logo">
             <div class="text">
-            <h1>Join the Shiplee Franchise</h1>
-            <p>Start your journey with a trusted logistics partner and reach customers anywhere.</p>
-            <button class="cta-button">Learn More</button>
-        </div>
+                <h1>Join the Shiplee Franchise</h1>
+                <p>Start your journey with a trusted logistics partner and reach customers anywhere.</p>
+                <button class="cta-button">Learn More</button>
+            </div>
         </div>
     </header>
 
-    <section id="why-choose-shiplee">
-        <h2>Why Choose Shiplee?</h2>
-        <div class="accordion">
-            <button class="accordion-button">Benefits</button>
-            <div class="accordion-content">
-                <ul>
-                    <li>Established Brand</li>
-                    <li>Comprehensive Training</li>
-                    <li>Strong Customer Support</li>
-                    <li>Marketing Assistance</li>
-                </ul>
+    <main>
+        <section id="why-choose-shiplee" aria-labelledby="choose-shiplee-heading" class="why-choose-section">
+            <h2 id="choose-shiplee-heading">Why Choose Shiplee?</h2>
+            <div class="accordion">
+                <button class="accordion-button" aria-expanded="false">
+                    Benefits
+                </button>
+                <div class="accordion-content">
+                    <ul>
+                        <li><span class="icon">✔️</span> Established Brand</li>
+                        <li><span class="icon">✔️</span> Comprehensive Training</li>
+                        <li><span class="icon">✔️</span> Strong Customer Support</li>
+                        <li><span class="icon">✔️</span> Marketing Assistance</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section id="franchise-benefits" aria-labelledby="franchise-benefits-heading" class="franchise-benefits-section">
+            <h2 id="franchise-benefits-heading">Franchise Benefits</h2>
+            <table>
+                <tr>
+                    <th>Benefit</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Low Investment</td>
+                    <td>Start your journey with a low initial investment.</td>
+                </tr>
+                <tr>
+                    <td>Flexible Hours</td>
+                    <td>Work according to your schedule.</td>
+                </tr>
+                <tr>
+                    <td>Lucrative Returns</td>
+                    <td>Enjoy high returns on your investment.</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="network-reach" aria-labelledby="network-reach-heading" class="network-reach-section">
+            <h2 id="network-reach-heading">From Anywhere to Everywhere</h2>
+            <p>Join a growing network of successful franchises across the country.</p>
+        </section>
+        
+        
+        <section id="partner-logos" aria-labelledby="partner-logos-heading" class="partner-logos-section">
+            <h2 id="partner-logos-heading">Our Partners</h2>
+            <div class="partner-grid">
+                <img src="images/partner1.jpg" alt="Partner 1">
+                <img src="images/partner2.png" alt="Partner 2">
+                <img src="images/partner3.jpg" alt="Partner 3">
+            </div>
+        </section>
+        
 
-    <section id="franchise-benefits">
-        <h2>Franchise Benefits</h2>
-        <table>
-            <tr>
-                <th>Benefit</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Low Investment</td>
-                <td>Start your journey with a low initial investment.</td>
-            </tr>
-            <tr>
-                <td>Flexible Hours</td>
-                <td>Work according to your schedule.</td>
-            </tr>
-            <tr>
-                <td>Lucrative Returns</td>
-                <td>Enjoy high returns on your investment.</td>
-            </tr>
-        </table>
-    </section>
+        <button id="scroll-to-top" onclick="scrollToTop()">↑</button>
+    </main>
 
-    <section id="network-reach">
-        <h2>From Anywhere to Everywhere</h2>
-        <p>Join a growing network of successful franchises across the country.</p>
-    </section>
-
-    <section id="partner-logos">
-        <h2>Our Partners</h2>
-        <div class="partner-grid">
-            <img src="images/partner1.jpg" alt="Partner 1">
-            <img src="images/partner2.png" alt="Partner 2">
-            <img src="images/partner3.jpg" alt="Partner 3">
-        </div>
-    </section>
-
-    <button id="scroll-to-top" onclick="scrollToTop()">↑</button>
-
-    <footer>
+    <footer class="footer-section">
         <p>&copy; 2024 Shiplee Franchise Opportunity. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#privacy-policy">Privacy Policy</a>
+            <a href="#terms-of-service">Terms of Service</a>
+            <a href="#contact-us">Contact Us</a>
+        </div>
     </footer>
+    
 
     <script src="script.js"></script>
 </body>

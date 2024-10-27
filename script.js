@@ -1,33 +1,32 @@
-let isDarkMode = false;
-function toggleDarkMode() {
-    isDarkMode = !isDarkMode; 
-    document.body.classList.toggle('dark-mode', isDarkMode);
+document.addEventListener("DOMContentLoaded", () => {
+    
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            const content = button.nextElementSibling;
+            content.style.display = isExpanded ? 'none' : 'block';
+        });
+    });
 
-    const icon = document.getElementById('toggle-icon');
-    if (isDarkMode) {
-        icon.classList.remove('fa-moon'); 
-        icon.classList.add('fa-sun'); 
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon'); 
-    }
-}
-
-document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const content = button.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
     });
 });
 
-window.onscroll = function() {
-    const scrollButton = document.getElementById("scroll-to-top");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollButton.style.display = "block";
-    } else {
-        scrollButton.style.display = "none";
-    }
-};
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
 function scrollToTop() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
